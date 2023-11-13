@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Reto1</string>
+    <string name="es">ESPAÑOL</string>
+    <string name="en">ENGLISH</string>
+    <string name="choose">Choose your language/elige tu idioma:</string>
+    <string name="insertUsername">Insert your username:</string>
+    <string name="logInButton">LOG IN</string>
+    <string name="userExists">Username already exists</string>
+</resources>
