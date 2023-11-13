@@ -59,7 +59,7 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
 
     private void insertNewLeaderboardEntry(String username, Integer correctAnswers) {
         try {
-            db = openOrCreateDatabase("", Context.MODE_PRIVATE, null);
+            db = openOrCreateDatabase("TEST", Context.MODE_PRIVATE, null);
 
             stmt = db.compileStatement(INSERT_NEW_USER_DATA);
             stmt.bindString(1, username);
