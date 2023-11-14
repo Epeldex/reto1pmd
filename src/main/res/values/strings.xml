@@ -2,6 +2,15 @@
     <string name="app_name">Reto1</string>
 
     <string name="leaderboard">Leaderboard</string>
+	<string name="back">Back</string>
+	<string name="share">Share it with your friends</string>
+	<string name="score">Score</string>
+	<string name="user">User</string>
+	<string name="subject">Check this app QuizMaster</string>
+	<string name="text">Try this new app about quizzes, QuizMaster</string>
+	<string name="chooseApp">Choose an app</string>
+	<string name="chooseToast">There is no app for that action</string>
+
     <string name="logout">Logout</string>
     <string name="txt_continue">Continue</string>
     <string name="correctAnswers">Number of correct answers: </string>

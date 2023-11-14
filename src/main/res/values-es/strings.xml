@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Reto1</string>
+
+    <string name="leaderboard">Tabla de clasificación</string>
+	<string name="back">Atras</string>
+	<string name="share">Compartelo con tus amigos</string>
+	<string name="score">Puntuación</string>
+	<string name="user">Usuario</string>
+	<string name="subject">Prueba la app QuizMaster</string>
+	<string name="text">Prueba esta nueva app sobre preguntas llamada QuizMaster</string>
+	<string name="chooseApp">Escoje una app</string>
+	<string name="chooseToast">No hay ninguna aplicación para manejar esta acción</string>
+
+    <string name="logout">Cerrar sesión</string>
+    <string name="txt_continue">Continuar</string>
+    <string name="correctAnswers">Numero de respuestas correctas: </string>
+    <string name="txt_leaderboard">Comprueba nuestra tabla de clasificaciones para ver tu posicion!</string>
+
+    <string name="txt_pejem">Question </string>
+    <string name="txt_rejem1">Answer 1</string>
+    <string name="txt_rejem2">Answer  2</string>
+    <string name="txt_rejem3">Answer  3</string>
+
+    <string name="es">ESPAÑOL</string>
+    <string name="en">ENGLISH</string>
+    <string name="choose">Choose your language/elige tu idioma:</string>
+    <string name="insertUsername">Inserta tu usuario:</string>
+    <string name="logInButton">INICIAR SESION</string>
+    <string name="userExists">El usuario ya existe</string>
+
+</resources>

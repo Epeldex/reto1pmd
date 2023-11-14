@@ -96,14 +96,14 @@ public class LeaderboardActivity extends AppCompatActivity  {
     void shareMail () {
         intent = new Intent(Intent.ACTION_SEND);
         intent.setData(Uri.parse("mailto:"));
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Ejemplo de asunto de tu correo");
-        intent.putExtra(Intent.EXTRA_TEXT, "Ejemplo de dexto del correo");
+        intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.subject));
+        intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.text));
         intent.setType("message/rfc822");
-        chooser = Intent.createChooser(intent, "Choose an app");
+        chooser = Intent.createChooser(intent, getString(R.string.chooseApp));
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         } else {
-           showToast("No hay ninguna aplicación para manejar esta acción");
+           showToast(getString(R.string.chooseToast));
         }
     }
 
