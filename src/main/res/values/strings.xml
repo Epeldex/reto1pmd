@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Reto1</string>
+
+    <string name="leaderboard">Leaderboard</string>
+    <string name="logout">Logout</string>
+    <string name="txt_continue">Continue</string>
+    <string name="correctAnswers">Number of correct answers: </string>
+    <string name="txt_leaderboard">Check out our leaderboard to see where you stand!</string>
+
+    <string name="txt_pejem">Question </string>
+    <string name="txt_rejem1">Answer 1</string>
+    <string name="txt_rejem2">Answer  2</string>
+    <string name="txt_rejem3">Answer  3</string>
+
+    <string name="es">ESPAÑOL</string>
+    <string name="en">ENGLISH</string>
+    <string name="choose">Choose your language/elige tu idioma:</string>
+    <string name="insertUsername">Insert your username:</string>
+    <string name="logInButton">LOG IN</string>
+    <string name="userExists">Username already exists</string>
+
 </resources>
