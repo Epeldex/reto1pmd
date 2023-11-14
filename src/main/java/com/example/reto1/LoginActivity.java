@@ -56,6 +56,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         buttonEn.setOnClickListener(this::onClick);
         buttonEs.setOnClickListener(this::onClick);
+        logInButton.setOnClickListener(this::onClick);
 
 
         Locale locale = getResources().getConfiguration().locale;
@@ -77,7 +78,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             setVisibility(true);
 
         if (view.getId() == R.id.logInButton) {
-
             try {
                 if (!isUser()) {
                     startActivityForResult(intent1, 1);
@@ -121,10 +121,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public boolean isUser() throws Exception {
         String username = usernameEditText.getText().toString();
         SQLiteDatabase db = openOrCreateDatabase("TEST", Context.MODE_PRIVATE, null);
-        Cursor cursor = db.rawQuery("SELECT username FROM TEST", null);
+        Cursor cursor = db.rawQuery("SELECT username FROM t_leaderboard", null);
 
         if (cursor.moveToFirst()) {
-            String storedUsername = cursor.getString(1);
+            String storedUsername = cursor.getString(cursor.getColumnIndex("username"));
             if (username.equals(storedUsername))
                 throw new Exception(getString(R.string.userExists));
         }

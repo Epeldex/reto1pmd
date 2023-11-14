@@ -35,7 +35,7 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_results);
 
         try {
             intent = getIntent();
@@ -53,7 +53,7 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
 
             insertNewLeaderboardEntry(username, correctAnswers);
         } catch (Exception e) {
-            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -79,7 +79,7 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
                 setResult(ResultActivity.RESULT_OK, intent);
                 finish();
             } else if (v.getId() == btnLeaderboard.getId()) {
-                Intent newIntent = new Intent(ResultActivity.this, LeaderboardActivty.class);
+                Intent newIntent = new Intent(ResultActivity.this, LeaderboardActivity.class);
                 startActivityForResult(newIntent, LEADERBOARD_ACTIVITY);
             }
         } catch (Exception e) {

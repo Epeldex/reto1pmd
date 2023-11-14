@@ -1,4 +1,4 @@
-package com.example.pmdreto1;
+package com.example.reto1;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -17,7 +17,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class LeaderboardActivity extends AppCompatActivity {
+import com.example.reto1.R;
+import com.example.reto1.ResultActivity;
+
+public class LeaderboardActivity extends AppCompatActivity  {
 	@SuppressLint("Range")
 
     Intent intent = null;
@@ -25,11 +28,11 @@ public class LeaderboardActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.leaderboard);
+        setContentView(R.layout.activity_leaderboard);
 
 		Button btnShare = (Button) findViewById(R.id.btnShare);
 		Button btnBack = (Button) findViewById(R.id.btnBack);
-		final Intent intentBack = new Intent(Leaderboard.this, MainActivity.class);
+		final Intent intentBack = new Intent(LeaderboardActivity.this, ResultActivity.class);
 
         btnShare.setOnClickListener( new View.OnClickListener() {
             @Override
@@ -41,7 +44,7 @@ public class LeaderboardActivity extends AppCompatActivity {
 		btnBack.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivityForResult(intentBack, 1);
+                finish();
             }
         } );
 
@@ -49,7 +52,7 @@ public class LeaderboardActivity extends AppCompatActivity {
 
         SQLiteDatabase db = null;
         db = openOrCreateDatabase("TEST", Context.MODE_PRIVATE, null);
-		Cursor cursor=db.rawQuery("SELECT * FROM TEST", null);
+		Cursor cursor=db.rawQuery("SELECT * FROM t_leaderboard", null);
 
         if (cursor.moveToFirst()) {
             do {
@@ -57,8 +60,8 @@ public class LeaderboardActivity extends AppCompatActivity {
                 TableRow tableRow = new TableRow(this);
 
                 // Get the values from the cursor
-                int score = cursor.getInt(cursor.getColumnIndex("Puntuacion"));
-                String username = cursor.getString(cursor.getColumnIndex("Nombre"));
+                int score = cursor.getInt(cursor.getColumnIndex("score"));
+                String username = cursor.getString(cursor.getColumnIndex("username"));
                 // Create TextViews for each column
                 TextView scoreTextView = new TextView(this);
                 scoreTextView.setText(String.valueOf(score));
@@ -96,12 +99,13 @@ public class LeaderboardActivity extends AppCompatActivity {
         intent.putExtra(Intent.EXTRA_SUBJECT, "Ejemplo de asunto de tu correo");
         intent.putExtra(Intent.EXTRA_TEXT, "Ejemplo de dexto del correo");
         intent.setType("message/rfc822");
-        //chooser = Intent.createChooser(intent, "Choose an app");
-        //if (intent.resolveActivity(getPackageManager()) != null) {
+        chooser = Intent.createChooser(intent, "Choose an app");
+        if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
-        //} else {
-        //    showToast("No hay ninguna aplicación para manejar esta acción");
-        //}
+        } else {
+           showToast("No hay ninguna aplicación para manejar esta acción");
+        }
     }
+
 }
 
