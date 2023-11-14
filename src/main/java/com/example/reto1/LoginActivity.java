@@ -80,6 +80,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if (view.getId() == R.id.logInButton) {
             try {
                 if (!isUser()) {
+                    intent1.putExtra("username", usernameEditText.getText().toString());
                     startActivityForResult(intent1, 1);
                 }
             } catch (Exception e) {
@@ -90,7 +91,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         // Mostrar las vistas adicionales.
 
     }
-
 
     private void setVisibility(Boolean visible) {
         if (!visible) {
@@ -129,6 +129,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 throw new Exception(getString(R.string.userExists));
         }
         return false;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        Configuration config = getResources().getConfiguration();
+        config.setLocale(new Locale("en"));
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+        usernameEditText.setText("");
+        recreate();
     }
 
 }

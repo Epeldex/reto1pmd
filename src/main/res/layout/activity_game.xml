@@ -7,10 +7,10 @@
     tools:context="com.example.reto1.GameActivity">
 
     <TextView
-        android:id="@+id/preguntaTextView1"
+        android:id="@+id/tvQuestion"
         android:layout_width="256dp"
         android:layout_height="62dp"
-        android:text="@string/txt_pejem"
+        android:text=""
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.283"
@@ -44,21 +44,21 @@
             android:id="@+id/radioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/txt_rejem1"
+            android:text=""
             android:textSize="25sp" />
 
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/txt_rejem2"
+            android:text=""
             android:textSize="25sp" />
 
         <RadioButton
             android:id="@+id/radioButton3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/txt_rejem3"
+            android:text=""
             android:textSize="25sp" />
 
     </RadioGroup>
@@ -68,7 +68,7 @@
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="315dp"
         android:layout_height="31dp"
-        android:progress="33"
+        android:progress="0"
         android:scaleY="5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.427"

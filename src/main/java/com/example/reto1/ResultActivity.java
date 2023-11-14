@@ -48,7 +48,7 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
 
             Integer correctAnswers = intent.getExtras().getInt("correctAnswers");
             String username = intent.getExtras().getString("username");
-            String newText = getString(R.string.correctAnswers) + " " + String.valueOf(correctAnswers);
+            String newText = getString(R.string.correctAnswers) + " " + correctAnswers;
             tvCorrectAnswers.setText(newText);
 
             insertNewLeaderboardEntry(username, correctAnswers);
