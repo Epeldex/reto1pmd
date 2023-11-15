@@ -21,7 +21,6 @@ import com.example.reto1.R;
 import com.example.reto1.ResultActivity;
 
 public class LeaderboardActivity extends AppCompatActivity  {
-	@SuppressLint("Range")
 
     Intent intent = null;
     Intent chooser = null;
@@ -52,7 +51,7 @@ public class LeaderboardActivity extends AppCompatActivity  {
 
         SQLiteDatabase db = null;
         db = openOrCreateDatabase("TEST", Context.MODE_PRIVATE, null);
-		Cursor cursor=db.rawQuery("SELECT * FROM t_leaderboard", null);
+		Cursor cursor=db.rawQuery("SELECT score, username FROM t_leaderboard ORDER BY score DESC", null);
 
         if (cursor.moveToFirst()) {
             do {

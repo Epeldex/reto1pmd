@@ -73,8 +73,8 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             case 4:
                 tvQuestion.setText(getString(R.string.question4));
                 rb1.setText(getString(R.string.q4_a1));
-                rb2.setText(getString(R.string.q1_a2));
-                rb3.setText(getString(R.string.q1_a3));
+                rb2.setText(getString(R.string.q4_a2));
+                rb3.setText(getString(R.string.q4_a3));
                 button.setText(getString(R.string.finish));
                 break;
         }
@@ -84,14 +84,14 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v.getId() == button.getId()) {
-            if (!button.getText().equals(getString(R.string.finish))) {
+            RadioButton rb = findViewById(radioGroup.getCheckedRadioButtonId());
+            if (rb.getText() == getString(R.string.q1_a2) || rb.getText() == getString(R.string.q2_a1) ||
+                    rb.getText() == getString(R.string.q3_a3) || rb.getText() == getString(R.string.q4_a1))
+                correctCount++;
+
+            if (cycle != 4) {
                 cycle++;
                 pb.setProgress(pb.getProgress() + 25);
-                RadioButton rb = findViewById(radioGroup.getCheckedRadioButtonId());
-                if (rb.getText() == getString(R.string.q1_a2) || rb.getText() == getString(R.string.q2_a1) ||
-                        rb.getText() == getString(R.string.q3_a3) || rb.getText() == getString(R.string.q4_a1)) {
-                    correctCount++;
-                }
                 setQuestionsForCycle();
             } else {
                 Intent newIntent = new Intent(GameActivity.this, ResultActivity.class);
@@ -99,6 +99,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 newIntent.putExtra("correctAnswers", correctCount);
                 startActivityForResult(newIntent, 2);
             }
+
         }
     }
 

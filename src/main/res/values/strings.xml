@@ -7,32 +7,31 @@
     <string name="correctAnswers">Number of correct answers: </string>
     <string name="txt_leaderboard">Check out our leaderboard to see where you stand!</string>
 
-    <string name="question1">Question</string>
-    <string name="question2">Question</string>
-    <string name="question3">Question</string>
-    <string name="question4">Question</string>
+    <string name="question1">What is the capital of France?</string>
+    <string name="q1_a1">London</string>
+    <string name="q1_a2">Paris</string>
+    <string name="q1_a3">Berlin</string>
 
-    <string name="q1_a1">Answer 1</string>
-    <string name="q1_a2">Answer 2</string>
-    <string name="q1_a3">Answer 3</string>
+    <string name="question2">How many continents are there on Earth?</string>
+    <string name="q2_a1">Seven</string>
+    <string name="q2_a2">Five</string>
+    <string name="q2_a3">Ten</string>
 
-    <string name="q2_a1">Answer 1</string>
-    <string name="q2_a2">Answer 2</string>
-    <string name="q2_a3">Answer 3</string>
+    <string name="question3">Who wrote "Romeo and Juliet"?</string>
+    <string name="q3_a1">Charles Dickens</string>
+    <string name="q3_a2">Jane Austen</string>
+    <string name="q3_a3">William Shakespeare</string>
 
-    <string name="q3_a1">Answer 1</string>
-    <string name="q3_a2">Answer 2</string>
-    <string name="q3_a3">Answer 3</string>
-
-    <string name="q4_a1">Answer 1</string>
-    <string name="q4_a2">Answer 2</string>
-    <string name="q4_a3">Answer 3</string>
+    <string name="question4">What is the largest planet in our solar system?</string>
+    <string name="q4_a1">Jupiter</string>
+    <string name="q4_a2">Mars</string>
+    <string name="q4_a3">Saturn</string>
 
     <string name="finish">FINISH</string>
 
     <string name="es">ESPAÑOL</string>
     <string name="en">ENGLISH</string>
-    <string name="choose">Choose your language/elige tu idioma:</string>
+    <string name="choose">Choose your language / Elige tu idioma</string>
     <string name="insertUsername">Insert your username:</string>
     <string name="logInButton">LOG IN</string>
     <string name="userExists">Username already exists</string>
