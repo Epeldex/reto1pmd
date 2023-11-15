@@ -16,10 +16,27 @@
     <string name="correctAnswers">Numero de respuestas correctas: </string>
     <string name="txt_leaderboard">Comprueba nuestra tabla de clasificaciones para ver tu posicion!</string>
 
-    <string name="txt_pejem">Question </string>
-    <string name="txt_rejem1">Answer 1</string>
-    <string name="txt_rejem2">Answer  2</string>
-    <string name="txt_rejem3">Answer  3</string>
+    <string name="question1">¿Cuál es la capital de Francia?</string>
+    <string name="q1_a1">Londres</string>
+    <string name="q1_a2">París</string>
+    <string name="q1_a3">Berlín</string>
+
+    <string name="question2">¿Cuántos continentes hay en la Tierra?</string>
+    <string name="q2_a1">Siete</string>
+    <string name="q2_a2">Cinco</string>
+    <string name="q2_a3">Diez</string>
+
+    <string name="question3">¿Quién escribió "Romeo y Julieta"?</string>
+    <string name="q3_a1">Charles Dickens</string>
+    <string name="q3_a2">Jane Austen</string>
+    <string name="q3_a3">William Shakespeare</string>
+
+    <string name="question4">¿Cuál es el planeta más grande de nuestro sistema solar?</string>
+    <string name="q4_a1">Júpiter</string>
+    <string name="q4_a2">Marte</string>
+    <string name="q4_a3">Saturno</string>
+
+    <string name="finish">FIN</string>
 
     <string name="es">ESPAÑOL</string>
     <string name="en">ENGLISH</string>

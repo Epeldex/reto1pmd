@@ -76,7 +76,7 @@
     <Button
         android:id="@+id/logInButton"
         android:layout_width="114dp"
-        android:layout_height="64dp"
+        android:layout_height="90dp"
         android:text="@string/logInButton"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
