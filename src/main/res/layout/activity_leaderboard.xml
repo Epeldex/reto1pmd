@@ -11,7 +11,7 @@
 		android:id="@+id/btnBack"
 		android:layout_width="111dp"
 		android:layout_height="60dp"
-		android:text="Back"
+		android:text="@string/back"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintLeft_toLeftOf="parent"
 		app:layout_constraintRight_toRightOf="parent"
@@ -22,7 +22,7 @@
 		android:id="@+id/textView"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="Leaderboard"
+		android:text="@string/leaderboard"
 		android:textAppearance="@style/TextAppearance.AppCompat.Display1"
 		app:fontFamily="sans-serif-black"
 		app:layout_constraintBottom_toBottomOf="parent"
@@ -67,7 +67,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="8dp"
-                    android:text="Score"
+                    android:text="@string/score"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -76,7 +76,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="8dp"
-                    android:text="Username"
+                    android:text="@string/user"
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -88,7 +88,7 @@
 		android:id="@+id/btnShare"
 		android:layout_width="273dp"
 		android:layout_height="43dp"
-		android:text="Share it with your friends"
+		android:text="@string/share"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintHorizontal_bias="0.496"
 		app:layout_constraintLeft_toLeftOf="parent"
