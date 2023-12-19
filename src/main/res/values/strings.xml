@@ -2,14 +2,14 @@
     <string name="app_name">Reto1</string>
 
     <string name="leaderboard">Leaderboard</string>
-	<string name="back">Back</string>
-	<string name="share">Share it with your friends</string>
-	<string name="score">Score</string>
-	<string name="user">User</string>
-	<string name="subject">Check this app QuizMaster</string>
-	<string name="text">Try this new app about quizzes, QuizMaster</string>
-	<string name="chooseApp">Choose an app</string>
-	<string name="chooseToast">There is no app for that action</string>
+    <string name="back">Back</string>
+    <string name="share">Share it with your friends</string>
+    <string name="score">Score</string>
+    <string name="user">User</string>
+    <string name="subject">Check this app QuizMaster</string>
+    <string name="text">Try this new app about quizzes, QuizMaster</string>
+    <string name="chooseApp">Choose an app</string>
+    <string name="chooseToast">There is no app for that action</string>
 
     <string name="logout">Logout</string>
     <string name="txt_continue">Continue</string>
@@ -44,5 +44,14 @@
     <string name="insertUsername">Insert your username:</string>
     <string name="logInButton">LOG IN</string>
     <string name="userExists">Username already exists</string>
+
+    <string name="selectError">Select something first</string>
+    <string name="emptyUsernameError">Username cannot be empty</string>
+    <string name="usernameTooLongError">Username cannot be longer than 10 characters</string>
+    <string name="txt_thumbnail">Take a photo and get thumbnail</string>
+    <string name="txt_foto">Take a photo and save it in real size</string>
+    <string name="txt_video">Start video recording</string>
+    <string name="txt_video_captured">Check your gallery if you want to watch the video you just captured!</string>
+    <string name="txt_photo_captured">Check your gallery if you want to watch the thumbnail you just captured!</string>
 
 </resources>

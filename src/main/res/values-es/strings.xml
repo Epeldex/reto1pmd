@@ -2,14 +2,14 @@
     <string name="app_name">Reto1</string>
 
     <string name="leaderboard">Tabla de clasificación</string>
-	<string name="back">Atras</string>
-	<string name="share">Compartelo con tus amigos</string>
-	<string name="score">Puntuación</string>
-	<string name="user">Usuario</string>
-	<string name="subject">Prueba la app QuizMaster</string>
-	<string name="text">Prueba esta nueva app sobre preguntas llamada QuizMaster</string>
-	<string name="chooseApp">Escoje una app</string>
-	<string name="chooseToast">No hay ninguna aplicación para manejar esta acción</string>
+    <string name="back">Atras</string>
+    <string name="share">Compartelo con tus amigos</string>
+    <string name="score">Puntuación</string>
+    <string name="user">Usuario</string>
+    <string name="subject">Prueba la app QuizMaster</string>
+    <string name="text">Prueba esta nueva app sobre preguntas llamada QuizMaster</string>
+    <string name="chooseApp">Escoje una app</string>
+    <string name="chooseToast">No hay ninguna aplicación para manejar esta acción</string>
 
     <string name="logout">Cerrar sesión</string>
     <string name="txt_continue">Continuar</string>
@@ -45,4 +45,12 @@
     <string name="logInButton">INICIAR SESION</string>
     <string name="userExists">El usuario ya existe</string>
 
+    <string name="selectError">Selecciona algo primero</string>
+    <string name="emptyUsernameError">El nombre de usuarion no puede estar vacio</string>
+    <string name="usernameTooLongError">El nombre de usuarion no puede ser mas largo que 10 caracteres</string>
+    <string name="txt_thumbnail">Hacer foto y obtener thumbnail</string>
+    <string name="txt_foto">Hacer foto y guardarla en tamano real</string>
+    <string name="txt_video">Empezar grabacion de video</string>
+    <string name="txt_video_captured"> El video capturado esta en la galeria!</string>
+    <string name="txt_photo_captured"> La foto capturada esta en la galeria!</string>
 </resources>

@@ -9,6 +9,7 @@ import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -83,23 +84,29 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == button.getId()) {
-            RadioButton rb = findViewById(radioGroup.getCheckedRadioButtonId());
-            if (rb.getText() == getString(R.string.q1_a2) || rb.getText() == getString(R.string.q2_a1) ||
-                    rb.getText() == getString(R.string.q3_a3) || rb.getText() == getString(R.string.q4_a1))
-                correctCount++;
+        try {
+            if (v.getId() == button.getId()) {
+                RadioButton rb = findViewById(radioGroup.getCheckedRadioButtonId());
+                if (rb.getText() == getString(R.string.q1_a2) || rb.getText() == getString(R.string.q2_a1) ||
+                        rb.getText() == getString(R.string.q3_a3) || rb.getText() == getString(R.string.q4_a1))
+                    correctCount++;
 
-            if (cycle != 4) {
-                cycle++;
-                pb.setProgress(pb.getProgress() + 25);
-                setQuestionsForCycle();
-            } else {
-                Intent newIntent = new Intent(GameActivity.this, ResultActivity.class);
-                newIntent.putExtra("username", username);
-                newIntent.putExtra("correctAnswers", correctCount);
-                startActivityForResult(newIntent, 2);
+                if (cycle != 4) {
+                    cycle++;
+                    pb.setProgress(pb.getProgress() + 25);
+                    setQuestionsForCycle();
+                } else {
+                    Intent newIntent = new Intent(GameActivity.this, ResultActivity.class);
+                    newIntent.putExtra("username", username);
+                    newIntent.putExtra("correctAnswers", correctCount);
+                    startActivityForResult(newIntent, 2);
+                }
+
             }
-
+        } catch (NullPointerException e) {
+            Toast.makeText(this, getString(R.string.selectError), Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
 

@@ -119,7 +119,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
     public boolean isUser() throws Exception {
-        String username = usernameEditText.getText().toString();
+        String username;
+        if ((username = usernameEditText.getText().toString()).isEmpty())
+            throw new Exception(getString(R.string.emptyUsernameError));
+        if (isTooLong(username))
+            throw new Exception(getString(R.string.usernameTooLongError));
+
         SQLiteDatabase db = openOrCreateDatabase("TEST", Context.MODE_PRIVATE, null);
         Cursor cursor = db.rawQuery("SELECT username FROM t_leaderboard", null);
 
@@ -140,6 +145,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         getResources().updateConfiguration(config, getResources().getDisplayMetrics());
         usernameEditText.setText("");
         recreate();
+    }
+
+    private boolean isTooLong(String username){
+        return username.length() >= 10 ? true : false;
     }
 
 }
